@@ -35,4 +35,8 @@ public class LoginPage {
     public void clearPasswordField() {
         passwordField.doubleClick().sendKeys(Keys.DELETE);
     }
+
+    public void clearLoginField() {
+        loginField.doubleClick().sendKeys(Keys.DELETE);
+    }
 }

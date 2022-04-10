@@ -62,9 +62,14 @@ public class AuthTest {
         loginPage.invalidAuth();
         loginPage.clearPasswordField();
         loginPage.sendInvalidPassword(authInfo.getPassword());
+        loginPage.invalidAuth();
         loginPage.clearPasswordField();
         loginPage.sendInvalidPassword(authInfo.getPassword());
-        loginPage.stepsForAuth(authInfo);
+        loginPage.invalidAuth();
+        loginPage.clearPasswordField();
+        loginPage.clearLoginField();
+        val authInfo1 = getAuthInfo();
+        loginPage.stepsForAuth(authInfo1);
         loginPage.invalidAuth();
     }
 }
